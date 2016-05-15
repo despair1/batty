@@ -29,4 +29,9 @@ public class char_move : MonoBehaviour {
 
 
     }
+    void Stop()
+    {
+        Debug.Log("Stop");
+        r.velocity = new Vector2(0, 0);
+    }
 }

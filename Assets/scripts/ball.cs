@@ -38,18 +38,24 @@ public class ball : MonoBehaviour {
         if (s == "batty")
         {
             //r.velocity = new Vector2(r.velocity.x, -r.velocity.y);
-            
+            coll.gameObject.SendMessage("Stop");
             foreach (ContactPoint2D con in coll.contacts)
             {
-                r.velocity = r.velocity - 2 * Vector2.Dot(r.velocity, con.normal) * con.normal;
-                Debug.Log(" cpoint " + con.point.x + con.point.y);
-                Debug.Log(" ball_pos " + transform.position.x + transform.position.y);
-                Debug.Log("normal x" + con.normal.x + "  y  " + con.normal.y);
+                //r.velocity = r.velocity - 2 * Vector2.Dot(r.velocity, con.normal) * con.normal;
+                if (Vector2.Dot(con.normal, r.velocity) <= 0)
+                {
+                    r.velocity = Vector2.Reflect(r.velocity, con.normal);
+                }
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.up) * 1000, Color.red,2, false);
+                //Debug.Log(" cpoint " + con.point.x + con.point.y);
+                //Debug.Log(" ball_pos " + transform.position.x + transform.position.y);
+                //Debug.Log("normal x" + con.normal.x + "  y  " + con.normal.y);
+                
             }
         }
         foreach (ContactPoint2D contact in coll.contacts)
         {
-            Debug.DrawRay(contact.point, contact.normal, Color.white);
+            Debug.DrawRay(contact.point, contact.normal, Color.white,3);
         }
     }
 
