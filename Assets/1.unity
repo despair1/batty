@@ -283,9 +283,9 @@ GameObject:
   - 4: {fileID: 149703629}
   - 212: {fileID: 149703628}
   - 50: {fileID: 149703625}
-  - 61: {fileID: 149703626}
   - 114: {fileID: 149703630}
   - 114: {fileID: 149703627}
+  - 60: {fileID: 149703626}
   m_Layer: 8
   m_Name: batty
   m_TagString: Untagged
@@ -309,9 +309,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &149703626
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!60 &149703626
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -322,8 +322,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.31999993, y: 1.2799997}
+  m_Points:
+    m_Paths:
+    - - {x: 0.13290314, y: 0.73885566}
+      - {x: 0.08482696, y: 0.81363904}
+      - {x: 0.00658638, y: 0.8331998}
+      - {x: -0.068721674, y: 0.78836125}
+      - {x: -0.16, y: 0.64}
+      - {x: -0.16, y: -0.64}
+      - {x: -0.09378156, y: -0.7680394}
+      - {x: 0.004066839, y: -0.8216874}
+      - {x: 0.08622661, y: -0.79353076}
+      - {x: 0.12843867, y: -0.7340823}
+      - {x: 0.16, y: -0.64}
+      - {x: 0.15271291, y: 0.6399998}
 --- !u!114 &149703627
 MonoBehaviour:
   m_ObjectHideFlags: 0

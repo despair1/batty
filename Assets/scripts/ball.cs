@@ -5,8 +5,13 @@ public class ball : MonoBehaviour {
     Rigidbody2D r;
     //int c;
     // Use this for initialization
+    private bool stop = false;
+    private Vector3 stop_pos;
+    private GameObject batty;
+    private float speed=6;
     void Start () {
         r.velocity = new Vector2(3, 5);
+        r.velocity = r.velocity.normalized * speed;
         r.freezeRotation = true;
         //c = 0;
 	
@@ -20,13 +25,27 @@ public class ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (stop)
+        {
+            Vector3 v = transform.position - stop_pos;
+            if (v.magnitude > 0.5)
+            {
+                batty.SendMessage("UnStop");
+                stop = false;
+            }
+        }
+
+    }
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        r.velocity = r.velocity.normalized * speed;
+    }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         //Debug.Log("Collision " + coll.collider.name);
         string s = coll.collider.name;
+        
         if (s == "root" || s== "ground")
         {
             r.velocity = new Vector2(r.velocity.x, -r.velocity.y);
@@ -38,7 +57,10 @@ public class ball : MonoBehaviour {
         if (s == "batty")
         {
             //r.velocity = new Vector2(r.velocity.x, -r.velocity.y);
+            stop = true;
+            stop_pos = transform.position;
             coll.gameObject.SendMessage("Stop");
+            batty = coll.gameObject;
             foreach (ContactPoint2D con in coll.contacts)
             {
                 //r.velocity = r.velocity - 2 * Vector2.Dot(r.velocity, con.normal) * con.normal;
@@ -51,6 +73,13 @@ public class ball : MonoBehaviour {
                 //Debug.Log(" ball_pos " + transform.position.x + transform.position.y);
                 //Debug.Log("normal x" + con.normal.x + "  y  " + con.normal.y);
                 
+            }
+        }
+        if (s=="block")
+        {
+            foreach ( ContactPoint2D con in coll.contacts)
+            {
+                r.velocity = Vector2.Reflect(r.velocity, con.normal);
             }
         }
         foreach (ContactPoint2D contact in coll.contacts)
