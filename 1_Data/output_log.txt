@@ -14,113 +14,81 @@ Platform assembly: F:\dev\unitydev\batty1\1_Data\Managed\UnityEngine.UI.dll (thi
 Loading F:\dev\unitydev\batty1\1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: F:\dev\unitydev\batty1\1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading F:\dev\unitydev\batty1\1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.218 seconds
+- Completed reload, in  0.174 seconds
 Platform assembly: F:\dev\unitydev\batty1\1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\dev\unitydev\batty1\1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.131502 ms
+UnloadTime: 1.769003 ms
 test kinematics
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- cpoint -7.529487-2.14583
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- ball_pos -7.529416-1.988989
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-normal x0.0004486601  y  0.9999999
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- cpoint -2.856462-2.145689
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- ball_pos -2.856413-1.988989
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-normal x0.0003100196  y  0.9999999
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- cpoint -6.09505-2.145403
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- ball_pos -6.094916-1.988989
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-normal x0.0008564749  y  0.9999996
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- cpoint -3.991421-2.289458
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- ball_pos -4.121496-2.289346
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-normal x-0.9999996  y  0.0008564749
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- cpoint -4.068766-2.162213
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- ball_pos -4.068647-2.023456
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-normal x0.0008559981  y  0.9999996
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
- cpoint -6.709367-2.184944
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
- ball_pos -6.636448-2.111925
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-normal x0.7066226  y  0.7075906
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
- cpoint -7.078304-2.162258
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
- ball_pos -7.078185-2.023259
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-normal x0.0008559981  y  0.9999996
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
- cpoint -4.608836-2.162479
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
- ball_pos -4.608716-2.023259
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-normal x0.0008559981  y  0.9999996
+Stop
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: f44 -> priority: 1 
+  Thread -> id: 27cc -> priority: 1 

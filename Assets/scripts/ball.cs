@@ -9,13 +9,26 @@ public class ball : MonoBehaviour {
     private Vector3 stop_pos;
     private GameObject batty;
     private float speed=6;
+    private int block_count=5;
     void Start () {
         r.velocity = new Vector2(3, 5);
         r.velocity = r.velocity.normalized * speed;
         r.freezeRotation = true;
+        block_count = GameObject.FindGameObjectsWithTag("block").Length;
+        batty = GameObject.FindGameObjectWithTag("batty");
         //c = 0;
 	
 	}
+
+    void destroy_block(GameObject block)
+    {
+        Destroy(block);
+        block_count--;
+        if (block_count<=0)
+        {
+            batty.SendMessage("IWin");
+        }
+    }
 
     void Awake()
     {
@@ -46,9 +59,13 @@ public class ball : MonoBehaviour {
         //Debug.Log("Collision " + coll.collider.name);
         string s = coll.collider.name;
         
-        if (s == "root" || s== "ground")
+        if (s == "root" ) // ||  s== "ground")
         {
             r.velocity = new Vector2(r.velocity.x, -r.velocity.y);
+        }
+        if (s== "ground")
+        {
+            batty.SendMessage("ILose");
         }
         if (s == "left_wall" || s == "right_wall")
         {
@@ -75,12 +92,14 @@ public class ball : MonoBehaviour {
                 
             }
         }
+        s = coll.collider.tag;
         if (s=="block")
         {
             foreach ( ContactPoint2D con in coll.contacts)
             {
                 r.velocity = Vector2.Reflect(r.velocity, con.normal);
             }
+            destroy_block(coll.collider.gameObject);
         }
         foreach (ContactPoint2D contact in coll.contacts)
         {
